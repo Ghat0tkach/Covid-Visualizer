@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7647c6659b.js" crossorigin="anonymous"></script>
+
     <title>Covid-Helper</title>
 </head>
 <body>
@@ -67,13 +69,71 @@
 </section>
 
 <footer>
-     <div class="contact">Contact Us</div>
-     <div class="container">
-        <form>a</form>
+    <div class="envelope">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+        </svg>
+    </div>
+   <div class="connections"> <div class="contact"><h2>Contact Us</h2>
+    <form>
+               
+      
+                       <label for="Name">Full Name </label>
+                       <input 
+                           type="text" 
+                           id="Name" 
+                           name="Name"
+                           placeholder="Enter Your Full Name"
+                           required
+                           >
+                       <label for="Email">Email</label>
+                       <input 
+                           type="email" 
+                           id="Email" 
+                           name="Email"
+                           placeholder="Enter Your Full Email"
+                           required
+                           >
+                        
+                           <label for="Check">Live Updates</label>
+                           <div class="noti"><input 
+                               type="checkbox" 
+                               id="astronautPassword" 
+                               name="astronautPassword"
+                               placeholder="******" 
+                               required
+   
+                               >
+                               Wish To Receive Updates On Your Email?</div>
+                           
+                        
+                      
+                           <button class="submit-btn" type="submit">submit</button>
+                   </form>  
+                   
+               </div>        
+
+
+       <div class="social">
+       
+          
+          
+           <h2>Social</h2>
+           <p><a href="https://www.linkedin.com/in/vikram1612/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a></p>
+           <p><a href="https://github.com/Ghat0tkach"></a><i class="fa-brands fa-square-github" ></i></p>
+           <a href="https://twitter.com/sarcasvik"><i class="fa-brands fa-square-twitter" ></i></a>
+         <a href="http://"><i class="fa-brands fa-discord" style="--fa-animation-duration: 10s;"></i></a>  
+      
+       
+       </div>
      </div>
+     <p class="end">Copyright@2023</p>
+   
+    
 </footer>
 
 <script>
+    
     let links= document.getElementById('links');
     let open= document.getElementById('open')
      open.addEventListener('click', function(){

@@ -9,7 +9,7 @@
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgb(100, 100, 210),rgba(186, 203, 184, 0.2));
-    background-repeat: no-repeat; 
+     background-repeat: no-repeat;
 }
 
 header{
@@ -57,6 +57,9 @@ nav img{
 }
 
 @media only screen and (max-width: 850px){
+    .home{
+        font-size: 40px;
+    }
     .links{
         display: none;
     }
@@ -168,12 +171,123 @@ section{
     fill: #E4CBCB;
 }
 
-
-
 footer{
-    height: 40%;
-    width: 100%;
-    display: block;
-   
+  
+   background: url("https://th.bing.com/th/id/R.42ff3056ad27f0c86701d55f436cee67?rik=Cf9olwBN%2fuGNVw&riu=http%3a%2f%2fwww.aacustomcrushing.com%2fwp-content%2fuploads%2f2014%2f03%2fContact-us-background.jpg&ehk=MPzWJlWnWkXKnHcbs%2fdgf8NNrOJSn%2fn1SZud2TzY%2fHw%3d&risl=&pid=ImgRaw&r=0.jpg");
+   background-repeat: no-repeat;
+  background-size: 100%;
+    height: 60%;
+    display: flex;
     justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   opacity: 80%;
+   z-index: 20;
+    
+}
+
+.connections{
+    
+    width: 100%;
+    display: inline-flex;
+  
+    justify-content: center;
+    padding: 25px 20px;
+}
+
+.contact{
+    
+    width: 30%;
+    border: 5px solid rgb(108, 108, 108);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    
+}
+
+
+.social{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    border: 2px solid #797575;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    border-radius: 5px;
+    box-shadow: 1px 1px 30px 2px whitesmoke;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 0px;
+    gap: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 30px 2px whitesmoke;
+}
+label{
+   
+    font-size: 20px;
+    margin-top: 15px; 
+}
+
+input{
+    border: 1px solid #0891b2;
+    padding: 8px;
+    border-radius: 5px;  
+}
+
+
+input[type="submit"], .submit-btn{
+    margin-top: 10px;
+    padding: 12px 17px;
+    border: none;
+    background-color: #cac1bf;
+    color: #ecfeff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+.envelope {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+   
+}
+
+.envelope svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 121px;
+}
+
+.envelope .shape-fill {
+    fill: #838383;
+}
+.submit-btn:hover{
+    background-color: #ea7171;
+    transition: all ease-in 0.5;
+}
+
+i{
+    font-size: 40px;
+    margin: 20px 0;
+
+}
+
+.end{
+    display: flex;
+   justify-content: center;
+   text-decoration: solid;
+   font-size: 15px;
+   align-items: center;
+   margin-bottom: auto;
 }
