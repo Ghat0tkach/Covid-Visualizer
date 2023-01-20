@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/7647c6659b.js" crossorigin="anonymous"></script>
 
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" ></script>
     <title>Covid-Helper</title>
 </head>
 <body>
@@ -49,21 +50,90 @@
     </div>
 
 </section>
-<section >
-    <div class="home">
-        
+
+<section class="tracker" >
+         
+       
+            <div class="container">
+                <div class="row">
+                    <div class="confirm">
+                        <h5>Confirmed</h5>
+                        <p id="confirm"></p>
+                    </div>
+                    <div class="Active">
+                        <h5>Active</h5>
+                        <p id="Active"></p>
+                       
+                    </div>
+                    <div class="Recovered">
+                        <h5>Recovered</h5>
+                        <p id="Recovered"></p>
+                    </div>
+                    <div class="death">
+                        <h5>Death</h5>
+                        <p id="death"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="live">
+            <tr>
+                <th>Recent-Time</th>
+                <th>State</th>
+                <th>Confirmed</th>
+                <th>Active</th>
+                <th>Recovered</th>
+                <th>Deaths</th>
+            </tr>
+        </table>
+     
+        <canvas id="myCanvas"></canvas>
     </div>
+    d
 
 </section>
-<section >
-    <div class="home">
-        <p>Corona-Visualizer</p>
-    </div>
 
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section >
-    <div class="home">
-        <p>Corona-Visualizer</p>
+    <div class="symptoms">
+           <p id="sym">SYMPTOMS</p>
+        <div class="first-row">
+            <img src="img\breath.jpg" alt="" srcset="">
+            <img src="img\cough.jpg" alt="" srcset="">
+            <img src="img\diarrhea.jpg" alt="" srcset="">
+            <img src="img\fatigue.jpg" alt="" srcset="">
+        </div>
+        <div class="second-row">
+            <img src="img\fever.jpg" alt="" srcset="">
+            <img src="img\headache.jpg" alt="" srcset="">
+            <img src="img\muscles.jpg" alt="" srcset="">
+            <img src="img\throat.jpg" alt="" srcset="">
+        </div>
     </div>
 
 </section>
@@ -98,8 +168,8 @@
                            <label for="Check">Live Updates</label>
                            <div class="noti"><input 
                                type="checkbox" 
-                               id="astronautPassword" 
-                               name="astronautPassword"
+                               id="Password" 
+                               name="Password"
                                placeholder="******" 
                                required
    
@@ -120,8 +190,8 @@
           
            <h2>Social</h2>
            <p><a href="https://www.linkedin.com/in/vikram1612/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a></p>
-           <p><a href="https://github.com/Ghat0tkach"></a><i class="fa-brands fa-square-github" ></i></p>
-           <a href="https://twitter.com/sarcasvik"><i class="fa-brands fa-square-twitter" ></i></a>
+           <p><a href="https://github.com/Ghat0tkach/"></a><i class="fa-brands fa-square-github" ></i></p>
+           <a href="https://twitter.com/sarcasvik/"><i class="fa-brands fa-square-twitter" ></i></a>
          <a href="http://"><i class="fa-brands fa-discord" style="--fa-animation-duration: 10s;"></i></a>  
       
        
@@ -132,14 +202,11 @@
     
 </footer>
 
-<script>
-    
-    let links= document.getElementById('links');
-    let open= document.getElementById('open')
-     open.addEventListener('click', function(){
-    links.style.display = 'block'
-})
-</script>
-    
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script src="script.js"></script>
+
+    
 </html>
