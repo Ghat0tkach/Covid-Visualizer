@@ -10,6 +10,7 @@
     height: 100vh;
     background: linear-gradient(rgb(100, 100, 210),rgba(186, 203, 184, 0.2));
     background-repeat: no-repeat;
+    display: block;
 }
 
 header{
@@ -108,7 +109,7 @@ nav img{
 
 
 section{
-    margin:0px 0px;
+    margin:0px 5px;
     
     height: 600px;
     width: 100%;
@@ -193,6 +194,7 @@ footer{
     align-items: center;
    opacity: 80%;
    z-index: 20;
+   margin-top: 10px;
     
 }
 
@@ -224,8 +226,9 @@ footer{
     font-family: 'Caveat', cursive;
     border-radius: 5px;
     box-shadow: 1px 1px 30px 2px whitesmoke;
+    
 }
-form{
+#contact{
     display: flex;
     flex-direction: column;
     
@@ -302,10 +305,12 @@ i{
 }
 /*tracker*/
 
+
 .row{
-    display: inline-flex;
-    justify-content: center;
-    margin-top: 0;
+   
+    margin-top: 10px;
+    position: absolute;
+
    
 
 }
@@ -316,23 +321,15 @@ h5{
     text-align: center;
 
 }
-.container
-{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: auto;
-    margin-right: auto;
-    background-color: #896f6f;
-    
 
-}
 .confirm{
-    color: rgb(237, 237, 139);
+    color: rgb(255, 157, 0);
     border: 10px solid lavenderblush;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.63);
 }
 .Active{
   color: #0891b2;
@@ -342,62 +339,274 @@ h5{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.63);
 }
 .Recovered{
-    color: rgb(159, 210, 159);
+    color: rgb(0, 241, 0);
  
     border: 10px solid lavenderblush;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.63);
 }
 .death{
-    color: rgb(182, 36, 36);
+    color: rgb(255, 7, 7);
    
     border: 10px solid lavenderblush;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.63);
 }
 p{
     text-align: center;
     margin-top: 10px;
 }
-.graph{
-   border: 2px solid black;
-   height: auto;
-}
+
 
 .tracker{
     margin: 0px 0px;
-    background:url("https://www.orangesmile.com/common/img_country_maps/india-map-0.jpg");
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    gap: 25px;
+  background: linear-gradient(rgb(223, 202, 202),rgb(201, 199, 205));
+  margin-bottom:20vh;
     
 }
-.graph{
-    margin-right: auto;
-    display: flex;
 
-}
 .symptoms{
     height: auto;
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(-150px);
     opacity: 0;
-    transition: 2s all ease;
+    transition: 3s all ease;
   }
   
   .symptoms.active{
     transform: translateY(0);
     opacity: 1;
   }
-#sym{
+  .Precautions{
+    height: auto;
+    position: absolute;
+    transform: translateY(150px) translateX(100px) ;
+    opacity: 0;
+    transition: 3s all ease;
+  }
+  
+  .Precautions.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .contact{
+    height: auto;
+    position: relative;
+    transform: translateY(150px) translateX(100px) ;
+    opacity: 0;
+    transition: 3s all ease;
+  }
+  
+  .contact{
+    transform: translateY(0);
+    opacity: 1;
+  }
+#sym,#pre{
     font-size: 20px;
     text-decoration: underline;
     border: 3px double rgb(108, 108, 108);
     padding: 5px 10px;
+    
 }
-.first-row,.second-row{
+.first-row,.second-row,.third-row,.fourth-row{
     margin-top: 5px;
+    
+}
+p#pre{
+    margin-top: 15%;
+}
+.third-row{
+    display: flex;
+    justify-content: center;
+}
+.fourth-row{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.safety-icons{
+    margin-bottom: 2px;
+    
+}
+
+#chart{
+    
+    height: 85%;
+    position: absolute;
+    /* margin: auto; */
+    display: inline-flex;
+    height: 10p;
+    margin-left: auto;
+    left: 50%;
+    top: 6%;
+    margin-top: 3%;
+
+    
+}
+.track{
+   
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 85%;
+    left: 39%;
+    
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family:Oswald;    
+
+
+}
+.about{
+    display: flex;
+    flex-direction: column;
+     margin:44px 0px;
+    justify-content: center;
+    width: 100%;
+    height: 10px;
+    background-color: #838383;
+    
+    margin-bottom: auto;
+}
+.rec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about1{
+    margin: 0px 0px;
+    top: 10%;
+    position: absolute;
+}    
+    
+
+.about2,.a{
+    margin: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 443px;
+    width: 350px;
+    border-radius: 5px;
+  
+    background-color: #212529;
+    color: whitesmoke;
+}
+
+.modal-inner{
+    width: 290px;
+    margin: 0 auto;
+    top: -18%;
+}
+
+.modal-inner-loading{
+    text-align: center;
+}
+
+/* modal buttons */
+
+.close-modal-btn-container{
+    text-align: right;
+    margin: 9px;
+}
+
+.modal-close-btn {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: whitesmoke;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active{
+    color: red;
+    cursor: pointer;
+}
+
+.modal-close-btn:disabled{
+    color: whitesmoke;
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.modal-choice-btns{
+    margin-top: 10px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-btn{
+    padding: 10px 24px;
+    cursor: pointer;
+}
+
+.modal-btns-reverse{
+    flex-direction: row-reverse;
+}
+
+/* modal input */
+
+input{
+    margin-top: 10px; 
+    border: 1px solid #212529;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* modal after submit */
+
+.loading{
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.modal-display-name{
+    color: fuchsia;
+}
+
+.modal-text{
+    height: 140px;
+    line-height: 23px;
+    margin-bottom: 0;
+}
+
+.idiot-gif{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.idiot-gif img{
+   
+    border-radius: 5px;
+}
+
+@media screen {
+    
 }

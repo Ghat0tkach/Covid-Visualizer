@@ -37,45 +37,34 @@ $(document).ready(function(){
        $("#confirm").append(total_confirmed)
        $("#Recovered").append(total_recovered)
        $("#death").append(total_deaths)
-   
+       $("#death").append("   Cases")
 
 
-      var myChart = document.getElementById("myChart").getContext("2d");
-      var chart = new Chart(myChart, {
-        type: "line",
-        data: {
-          labels: states,
-          datasets: [
-            {
-              label: "Confirmed Cases",
-              data: confirmed,
-              backgroundColor: "#f1c40f",
-              minBarLength: 100,
-            },
-            {
-              label: "Recovered",
-              data: recovered,
-              backgroundColor: "#2ecc71",
-              minBarLength: 100,
-            },
-            {
-              label: "Deceased",
-              data: deaths,
-              backgroundColor: "#e74c3c",
-              minBarLength: 100,
-            },
-          ],
-        },
-        option: {},
-      });
+     
+     
    
     })
 
    
 
 })
-function reveal() {
-    var reveals = document.querySelectorAll(".symptoms");
+function reveal2() {
+    var reveals2 = document.querySelectorAll(".symptoms");
+  
+    for (var i = 0; i < reveals2.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals2[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals2[i].classList.add("active");
+      } else {
+        reveals2[i].classList.remove("active");
+      }
+    }
+  }
+  function reveal() {
+    var reveals = document.querySelectorAll(".Precautions");
   
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
@@ -91,3 +80,57 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal2);
+
+  const modal = document.getElementById('modal')
+  const modalCloseBtn = document.getElementById('modal-close-btn')
+  const consentForm = document.getElementById('consent-form')
+  const modalText = document.getElementById('modal-text')
+  const declineBtn = document.getElementById('decline-btn')
+  const modalChoiceBtns = document.getElementById('modal-choice-btns')
+  
+  setTimeout(function(){
+      modal.style.display = 'inline'
+  }, 1500)
+  
+  modalCloseBtn.addEventListener('click', function(){
+      modal.style.display = 'none'
+  })
+  
+  declineBtn.addEventListener('mouseenter', function(){
+      modalChoiceBtns.classList.toggle('modal-btns-reverse')
+  })
+  
+  consentForm.addEventListener('submit', function(e){
+      e.preventDefault()
+      
+      const consentFormData = new FormData(consentForm)
+      const fullName = consentFormData.get('fullName')
+      
+      modalText.innerHTML = `
+      <div class="modal-inner-loading">
+          <img src="img\loading.svg">
+          <p id="upload-text">Checking Your Will for Commitment...</p>
+      </div>` 
+      
+      setTimeout(function(){
+          document.getElementById('upload-text').innerText = `
+          Finalizing...`
+      }, 1500)
+      
+      
+      setTimeout(function(){
+          document.getElementById('modal-inner').innerHTML = `
+          <h2>Thanks <span class="modal-display-name">${fullName}</span>! </h2>
+          <p>We Made Sure YOU're following Covid Measures.</p>
+          <div class="idiot-gif">
+              <img src="imag/thank_you.gif">
+          </div>
+      `
+      modalCloseBtn.disabled = false
+      }, 3000)
+    
+  }) 
+  
+  
+ 
