@@ -126,7 +126,7 @@ function reveal2() {
       setTimeout(function(){
           document.getElementById('modal-inner').innerHTML = `
           <h2>Thanks <span class="modal-display-name">${fullName}</span>! </h2>
-          <p>We Made Sure YOU're following Covid Measures.</p>
+          <p>We Made Sure You're following Covid Measures.</p>
           <div class="thank-gif">
               <img src="img/thank_you.gif">
           </div>
