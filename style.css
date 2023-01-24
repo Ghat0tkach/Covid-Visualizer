@@ -62,50 +62,6 @@ nav img{
     display: none;
 }
 
-@media only screen and (max-width: 850px){
-    .home{
-        font-size: 40px;
-    }
-    .links{
-        display: none;
-    }
-
-    header{
-        width: 200%;
-    }
-    .logo{
-        font-size: 20px;
-        margin-left: -15px;
-    }
-
-   nav ul{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 80vh;
-    background-color:rgb(255, 255, 255);
-    padding :65px;
-   } 
-   nav ul li{
-    display: block;
-    text-align: center;
-    margin: 50px;
-   }
-
-   nav img {
-    display: block;
-    width: 30px;
-    cursor: pointer;
-   
-   }
-   nav ul img{
-    position:absolute;
-    top: 30px;
-    left: 30px;
-   }
-  
-}
 
 
 section{
@@ -180,6 +136,47 @@ section{
 
 .waves .shape-fill {
     fill: #E4CBCB;
+}
+.waves-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.waves-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 64px;
+}
+
+.waves-2 .shape-fill {
+    fill: #FFFFFF;
+}
+.triangle {
+    position: absolute;
+   bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+   
+}
+
+.triangle svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 135px;
+    transform: rotateY(180deg);
+}
+
+.triangle .shape-fill {
+    fill: #d0aeae;
 }
 #chart{
     
@@ -299,7 +296,10 @@ p#pre{
     
 }
 
+.safety{
+    display: inline-block;
 
+}
 .symptoms{
     height: auto;
     position: relative;
@@ -365,7 +365,7 @@ p#pre{
     justify-content: center;
     width: 100%;
     height: 10px;
-    background-color: #8d7474;
+    background-color: #e9dbdb;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: auto;
 }
@@ -377,35 +377,43 @@ p#pre{
 }
 .about1{
     margin: 0px 0px;
-    top: 10%;
+    top: 17%;
     position: absolute;
 }    
     
 
 .about2,.a{
     margin: 10px;
+    bottom: -25%;
+    position: relative;
 }
 h3{
     text-align: center;
     margin-top: 2px;
+    color: #0e0e0d;
+    text-shadow: #797575;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 10px 10px;
+    
+
 
 }
 
 /*footer section*/
 footer{
   
-    background: url("https://th.bing.com/th/id/R.42ff3056ad27f0c86701d55f436cee67?rik=Cf9olwBN%2fuGNVw&riu=http%3a%2f%2fwww.aacustomcrushing.com%2fwp-content%2fuploads%2f2014%2f03%2fContact-us-background.jpg&ehk=MPzWJlWnWkXKnHcbs%2fdgf8NNrOJSn%2fn1SZud2TzY%2fHw%3d&risl=&pid=ImgRaw&r=0.jpg");
-    background-repeat: no-repeat;
-   background-size: 100%;
-     height: 60%;
+   
+   
+   background-color: #e1b5b5;
+    
      display: flex;
      justify-content: center;
      position: relative;
      flex-direction: column;
      align-items: center;
-    opacity: 80%;
-    z-index: 20;
-    margin-top: 10px;
+    
+    
      
  }
  
@@ -436,7 +444,7 @@ footer{
      text-align: center;
      font-family: 'Caveat', cursive;
      border-radius: 5px;
-     box-shadow: 1px 1px 30px 2px whitesmoke;
+    
      
  }
  #contact{
@@ -448,11 +456,11 @@ footer{
      margin-top: 0px;
      gap: 5px;
      border-radius: 5px;
-     box-shadow: 1px 1px 30px 2px whitesmoke;
+   
  }
  label{
     
-     font-size: 20px;
+     font-size: 14px;
      margin-top: 15px; 
  }
  
@@ -508,7 +516,7 @@ footer{
     height: 443px;
     width: 350px;
     border-radius: 5px;
-  
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #212529;
     color: whitesmoke;
 }
@@ -573,7 +581,9 @@ input{
     width: 100%;
     border-radius: 3px;
 }
-
+.label{
+    text-align: center;
+}
 /* modal after submit */
 
 .loading{
@@ -591,13 +601,104 @@ input{
     margin-bottom: 0;
 }
 
-.idiot-gif{
+.thank-gif{
     width: 95%;
-    margin: 0 auto;
+    margin: 10 auto;
+  
 }
 
-.idiot-gif img{
-   
+.thank-gif img{
+    display: flex;
+    margin-top:20px;
+    margin-bottom:auto;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
 }
 
+.chk{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #3b55bb;
+   
+}
+.a:hover{
+   font-weight: bold;
+  
+   border: 2px solid rgb(210, 200, 179);
+  
+}
+
+/*responsive */
+@media only screen and (max-width: 1200px){
+    .open{
+        display: block;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+
+    }
+    .modal{
+        right: 50%;
+        left: 0;
+        bottom:0;
+        top:0;
+    }
+    img{
+        size: 10%;
+    }
+    .third-row img{
+        height: 144px;
+    }
+    .third-row{
+        flex-direction: column;
+    }
+    .home{
+        font-size: 40px;
+    }
+    .links{
+        display: none;
+    }
+
+    header{
+        width: 200%;
+    }
+    .logo{
+        font-size: 20px;
+        margin-left: -15px;
+    }
+
+   nav ul{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80vh;
+    background-color:rgb(255, 255, 255);
+    padding :65px;
+   } 
+   nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px;
+   }
+
+   nav img {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+   
+   }
+   nav ul img{
+    position:absolute;
+    top: 30px;
+    left: 30px;
+   }
+  
+}

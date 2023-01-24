@@ -11,7 +11,7 @@
 <script src="https://kit.fontawesome.com/7647c6659b.js" crossorigin="anonymous"></script>
 
 <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" ></script>
-    <title>Covid-Helper</title>
+    <title>Covid-]Visualizer</title>
     <link rel="icon" href="https://img.freepik.com/free-photo/red-inscription-covid-19-coronavirus-through-magnifying-glass-background-lung-x-ray-concept-protection-from-coronavirus-closeup-selective-focus_98862-495.jpg?size=626&ext=jpg" type="image/icon type">
 </head>
 <body>
@@ -24,21 +24,23 @@
         
     <nav>
         <ul class="links">
-        <li class="icons"><a href="#">Home</a></li>
-        <li  class="icons"><a href="#">Tracker</a></li>
-        <li class="icons"><a href="#">Precautions</a></li>
+       
+        <li class="icons"><a href="#1">Home</a></li>
+        <li  class="icons"><a href="#2">Tracker</a></li>
+        <li class="icons"><a href="#3">Precautions</a></li>
         <li class="icons"><a href="https://jecjabalpur.acm.org/" target="_blank">acm-JEC</a></li>
-        <li class="icons"><a href="#">Contact Us</a></li>
-          <img src="img\x-bar.jpeg" class="box" onclick="closemenu()" alt="" srcset="">
+        <li class="icons"><a href="#4">About Us</a></li>
+        
          </ul>
-        <button class="open" ><img src="img\hamburger-menu.png"   alt="" srcset=""></button>
+        
     </nav>
    
 
 </header>
 <section >
     <div class="home">
-        <p >Corona-<span class="text">Visualizer</span></p>
+       
+        <p >Covid-<span class="text">Visualizer</span></p>
         <p id="main"> Your One way Approach to track and prevent <span class="text">Covid.</span></p>
         
     </div>
@@ -55,7 +57,7 @@
 <section class="tracker" ><div class="track">COVID-TRACKER</div>
          
             
-           
+    <a name="2"></a>
                 <div class="row">
                     <div class="confirm">
                         <h5>Confirmed</h5>
@@ -113,7 +115,8 @@
 
 
 
-<section >
+<section class="safety" >
+    <a name="3"></a>
     <div class="symptoms">
            <p id="sym">SYMPTOMS</p>
         <div class="first-row">
@@ -121,6 +124,7 @@
             <img class="safety-icons "src="img\symptoms\cough.jpg" alt="" srcset="">
             <img class="safety-icons "src="img\symptoms\diarrhea.jpg" alt="" srcset="">
             <img class="safety-icons " src="img\symptoms\fatigue.jpg" alt="" srcset="">
+        </div>
         <div class="second-row">
             <img class="safety-icons "src="img\symptoms\fever.jpg" alt="" srcset="">
             <img class="safety-icons "src="img\symptoms\headache.jpg" alt="" srcset="">
@@ -128,8 +132,6 @@
             <img class="safety-icons "src="img\symptoms\throat.jpg" alt="" srcset="">
         </div>
     </div>
-</section>
-    <section >
     <div class="Precautions">
         <p id="pre">PRECAUTIONS</p>
      <div class="third-row">
@@ -141,21 +143,29 @@
      <div class="fourth-row">
          <img class="safety-icons "src="img\precautions\5.jpg" alt="" srcset="">
          <img class="safety-icons "src="img\precautions\6.jpg" alt="" srcset="">
-        
-     </div>
+         </div>
  </div>
+</section>
+    <section >
+    
 </section>
 <section class="about">
     <div class="about1">
+        <a name="4"></a>
         <p><h3>ABOUT US</h3></p>
-        <p>This Project Has been made in association with &nbsp;<a href>ACM JEC</a>&nbsp; </p><p>Covid Visualizer is a simple tool to track and covid all over india.It depicts the percentage wise corona widespread and the amount of cases which are being fetch through API</p>
+        <p>This Project Has been made in association with<a class="a" href="https://jecjabalpur.acm.org/">ACM JEC</a>for the competion&nbsp;<b><u>Republic of coders.</u> </b> </p><p>Covid Visualizer is a simple tool to track and covid all over india.It depicts the percentage wise corona widespread and the amount of cases which are being fetch through API</p>
     </div>
     <div class="about2"><p><h3>RESOURCES</h3></p>
         <div class="rec"> 
-            <a class="a" href="">SVG EDITOR</a>
-            <a class="a" href="">COVID19.ORG</a>
-            <a class="a" href="">India SVG map</a></div>
+            <a class="a " href="https://www.covid19india.org/" target="_blank">India Map SVG</a>(scrapped from covid19.org website)
+            <a class="a" href="https://github.com/covid19india/api" target="_blank">COVID19.ORG</a>
+            <a class="a" href="https://www.shapedivider.app/" target="_blank">SVG Maker</a></div>
       
+    </div>
+    <div class="waves-2">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
     </div>
 </section>
 <footer>
@@ -180,16 +190,11 @@
                            required
                            >
                         
-                           <label for="Check">Live Updates</label>
-                           <div class="noti"><input 
-                               type="checkbox" 
-                               id="Password" 
-                               name="Password"
-                               placeholder="******" 
-                               required
-   
-                               >
-                               Wish To Receive Updates On Your Email?</div>
+                           <label for="Check">Wish To Receive Updates On Your Email?<input 
+                            type="checkbox"></label>
+                            
+                            
+                          
                            
                         
                       
@@ -204,16 +209,25 @@
           
           
            <h2>Social</h2>
-           <p><a href="https://www.linkedin.com/in/vikram1612/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a></p>
-           <p><a href="https://github.com/Ghat0tkach/"></a><i class="fa-brands fa-square-github" ></i></p>
-           <a href="https://twitter.com/sarcasvik/"><i class="fa-brands fa-square-twitter" ></i></a>
-         <a href="http://"><i class="fa-brands fa-discord" style="--fa-animation-duration: 10s;"></i></a>  
+           <p><a href="https://www.linkedin.com/in/vikram1612/" style="
+            color: #02025d;" target="_blank"><i class="fa-regular fa-brands fa-linkedin " style="--fa-primary-opacity: 0.20" ></i></a></p>
+           <p><a href="https://github.com/Ghat0tkach/" style="
+            color: #030405;" target="_blank"><i class="fa-brands fa-square-github" ></i></a></p>
+           <a href="https://twitter.com/sarcasvik/" style="
+           color: #0d5ba9;
+       " target="_blank"><i class="fa-brands fa-square-twitter" ></i></a>
+   
       
        
        </div>
+       
      </div>
-     <p class="end">Copyright@2023</p>
-   
+    
+     <div class="triangle">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+        </svg>
+    </div>
     
 </footer>
 
@@ -233,11 +247,10 @@
             placeholder="Enter your name"
             aria-label="name" 
             required/>
-           <label> <input 
-            type="checkbox" 
-            required/>
-            I agree to sanitize my hands and follow safety measures
-        </label>
+            <div class="chk"> <input type="checkbox">
+                <label >   I agree to sanitize my hands and follow safety measures</label><br>
+            </div>
+           
        
         <div class="modal-choice-btns" id="modal-choice-btns">
             <button type="submit" class="modal-btn">Accept</button>

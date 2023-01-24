@@ -1,3 +1,4 @@
+//fetched-api//
 $(document).ready(function(){
     var url ="https://data.covid19india.org/data.json"
 
@@ -48,6 +49,7 @@ $(document).ready(function(){
    
 
 })
+//animation//
 function reveal2() {
     var reveals2 = document.querySelectorAll(".symptoms");
   
@@ -82,6 +84,8 @@ function reveal2() {
   window.addEventListener("scroll", reveal);
   window.addEventListener("scroll", reveal2);
 
+
+  //Cookie page//
   const modal = document.getElementById('modal')
   const modalCloseBtn = document.getElementById('modal-close-btn')
   const consentForm = document.getElementById('consent-form')
@@ -109,7 +113,7 @@ function reveal2() {
       
       modalText.innerHTML = `
       <div class="modal-inner-loading">
-          <img src="img\loading.svg">
+          <img src="img/loading.svg">
           <p id="upload-text">Checking Your Will for Commitment...</p>
       </div>` 
       
@@ -123,8 +127,8 @@ function reveal2() {
           document.getElementById('modal-inner').innerHTML = `
           <h2>Thanks <span class="modal-display-name">${fullName}</span>! </h2>
           <p>We Made Sure YOU're following Covid Measures.</p>
-          <div class="idiot-gif">
-              <img src="imag/thank_you.gif">
+          <div class="thank-gif">
+              <img src="img/thank_you.gif">
           </div>
       `
       modalCloseBtn.disabled = false
