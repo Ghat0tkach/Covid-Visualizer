@@ -135,6 +135,13 @@ function reveal2() {
       }, 3000)
     
   }) 
-  
-  
- 
+  const login=document.getElementById('form-submit')
+  login.addEventListener('click',function(e){
+      e.preventDefault()
+      const contact=document.getElementById('contact')
+      contact.innerHTML=`<div class="post-contact">
+          <p>Thanks for Contacting</p>
+          <p>We Will Reach You Shortly through your Email</p>
+          </div>
+                        `
+  })

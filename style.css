@@ -324,19 +324,7 @@ p#pre{
     transform: translateY(0);
     opacity: 1;
   }
-  .contact{
-    height: auto;
-    position: relative;
-    transform: translateY(150px) translateX(100px) ;
-    opacity: 0;
-    transition: 3s all ease;
-  }
-  
-  .contact{
-    transform: translateY(0);
-    opacity: 1;
-  }
-
+ 
 
 
 .track{
@@ -447,7 +435,7 @@ footer{
     
      
  }
- #contact{
+ #contact1{
      display: flex;
      flex-direction: column;
      
@@ -632,6 +620,18 @@ input{
   
    border: 2px solid rgb(210, 200, 179);
   
+}
+
+.post-contact{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 90%;
+    flex-wrap: wrap;
+
+    
+    padding: 10px 10px;
 }
 
 /*responsive */
