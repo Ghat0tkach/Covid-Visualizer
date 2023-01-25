@@ -1,7 +1,7 @@
 # Covid-Visualizer
 A frontend Web Application To Track Covid
 
-## This website is been made in association with <a href=" ">ACM JEC</a> For REPUBLIC OF CODERS
+## This website is been made in association with <a href=" https://jecjabalpur.acm.org/" target="_blank">ACM JEC</a> For REPUBLIC OF CODERS
 
 
 ## FEATURES
